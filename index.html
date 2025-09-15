@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人博客</title>
+    <style>
+        /* 基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        a {
+            color: #2c3e50;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: #3498db;
+        }
+        
+        /* 头部样式 */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px 0;
+            margin-bottom: 30px;
+            border-radius: 0 0 8px 8px;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .logo a {
+            color: #2c3e50;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        /* 主要内容区域 */
+        .container {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        main {
+            flex: 2;
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* 文章样式 */
+        article {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        article:last-child {
+            border-bottom: none;
+        }
+        
+        .post-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .post-meta {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .post-content {
+            margin-bottom: 15px;
+        }
+        
+        .read-more {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .read-more:hover {
+            background: #2980b9;
+            color: white;
+        }
+        
+        /* 侧边栏样式 */
+        aside {
+            flex: 1;
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sidebar-widget {
+            margin-bottom: 30px;
+        }
+        
+        .sidebar-widget h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .sidebar-widget ul {
+            list-style: none;
+        }
+        
+        .sidebar-widget ul li {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px dotted #eee;
+        }
+        
+        /* 关于我部分 */
+        .about-me {
+            text-align: center;
+        }
+        
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #eee;
+        }
+        
+        /* 页脚样式 */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            color: #777;
+            border-top: 1px solid #eee;
+        }
+        
+        .social-links {
+            margin-bottom: 15px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 15px;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 页面头部 -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">我的博客</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于</a></li>
+                    <li><a href="archives.html">归档</a></li>
+                    <li><a href="contact.html">联系</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <div class="container">
+        <!-- 文章列表 -->
+        <main>
+            <article>
+                <h2 class="post-title"><a href="post.html">欢迎来到我的博客</a></h2>
+                <div class="post-meta">发布于: 2023年10月15日 | 分类: <a href="#">随笔</a></div>
+                <div class="post-content">
+                    <p>这是我的第一篇博客文章。在这里，我将分享我的想法、经验和学习笔记。博客将主要关注技术、编程和个人成长方面的内容。</p>
+                    <p>希望你能在这里找到有价值的内容，也欢迎你与我交流你的想法和建议。</p>
+                </div>
+                <a href="post.html" class="read-more">阅读更多</a>
+            </article>
+
+            <article>
+                <h2 class="post-title"><a href="post.html">如何开始使用GitHub Pages</a></h2>
+                <div class="post-meta">发布于: 2023年10月10日 | 分类: <a href="#">技术</a></div>
+                <div class="post-content">
+                    <p>GitHub Pages是一个免费的静态网站托管服务，可以直接从GitHub仓库托管个人、组织或项目页面。</p>
+                    <p>在这篇文章中，我将介绍如何使用GitHub Pages搭建个人博客，包括自定义域名、Jekyll主题等内容。</p>
+                </div>
+                <a href="post.html" class="read-more">阅读更多</a>
+            </article>
+
+            <article>
+                <h2 class="post-title"><a href="post.html">学习Python的第一周</a></h2>
+                <div class="post-meta">发布于: 2023年10月5日 | 分类: <a href="#">编程</a></div>
+                <div class="post-content">
+                    <p>这是我学习Python编程语言的第一周总结。Python以其简洁的语法和强大的功能而闻名，非常适合初学者。</p>
+                    <p>在这篇文章中，我将分享我学习过程中遇到的挑战、解决方案以及一些有用的资源。</p>
+                </div>
+                <a href="post.html" class="read-more">阅读更多</a>
+            </article>
+        </main>
+
+        <!-- 侧边栏 -->
+        <aside>
+            <div class="sidebar-widget about-me">
+                <img src="https://via.placeholder.com/150" alt="个人照片" class="profile-img">
+                <h3>关于我</h3>
+                <p>你好！我是一名开发者兼技术爱好者，喜欢学习新知识并分享我的经验。这个博客是我记录和分享想法的地方。</p>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>分类</h3>
+                <ul>
+                    <li><a href="#">技术</a> (12)</li>
+                    <li><a href="#">编程</a> (8)</li>
+                    <li><a href="#">随笔</a> (5)</li>
+                    <li><a href="#">学习笔记</a> (15)</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>最新文章</h3>
+                <ul>
+                    <li><a href="#">欢迎来到我的博客</a></li>
+                    <li><a href="#">如何开始使用GitHub Pages</a></li>
+                    <li><a href="#">学习Python的第一周</a></li>
+                    <li><a href="#">Web开发入门指南</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>订阅</h3>
+                <p>通过邮箱订阅，获取最新文章通知。</p>
+                <form>
+                    <input type="email" placeholder="输入您的邮箱" style="padding: 8px; width: 100%; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                    <button type="submit" style="background: #3498db; color: white; border: none; padding: 8px 15px; border-radius: 4px; width: 100%; cursor: pointer;">订阅</button>
+                </form>
+            </div>
+        </aside>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="social-links">
+            <a href="#" title="GitHub">GitHub</a>
+            <a href="#" title="Twitter">Twitter</a>
+            <a href="#" title="LinkedIn">LinkedIn</a>
+            <a href="#" title="Email">Email</a>
+        </div>
+        <p>&copy; 2023 我的个人博客. 使用 <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> 托管.</p>
+    </footer>
+</body>
+</html>
